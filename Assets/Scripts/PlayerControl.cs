@@ -29,19 +29,20 @@ public class PlayerControl : MonoBehaviour
             {
                 anim.SetBool("IsRuning", true);
             }
+            h = Input.GetAxisRaw("Horizontal");
         }
     }
     public void MoveRight()
     {
-        Debug.Log("Press");
         h = 1;
-       
+
     }
-    public void MoveLeft() {
+    public void MoveLeft() 
+    {
         h = -1;
     }
-    public void ButtonUP() {
+    public void ButtonUP() 
+    {
        h=0;
-        Debug.Log("UP");
     }
 }

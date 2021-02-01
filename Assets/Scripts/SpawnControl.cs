@@ -15,7 +15,7 @@ public class SpawnControl : MonoBehaviour
     public static bool IsGame = false;
 
     public Text text;
-    public int score = 0;
+    public static int score = 0;
 
     private Vector2 spawn;
     private Vector2 spawnPlayer;
@@ -39,7 +39,7 @@ public class SpawnControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        score = 0;
         IsGame = true;
         spawn = bodyMoon.transform.position;
         spawnPlayer = bodyPlayer.transform.position;
@@ -72,7 +72,7 @@ public class SpawnControl : MonoBehaviour
             if (Health >= 0)
             {
                 score++;
-                text.text = "Score: " + score / 100;
+                text.text = "Score:\n" + score / 100;
             }
         }
         else {
@@ -88,7 +88,7 @@ public class SpawnControl : MonoBehaviour
             if (Health >= 0)
             {
                 score++;
-                text.text = "Score: " + score / 100;
+                text.text = "Score:\n" + score / 100;
             }
 
         }

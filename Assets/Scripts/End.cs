@@ -6,13 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
-    public GameObject end;
+    public GameObject popup;
     public GameObject player;
     public Text textScore;
+
+    public void Start()
+    {
+        popup.SetActive(false) ;
+    }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-    
+        textScore.text = "Score:\n" + SpawnControl.score / 100;
         Destroy(player);
-        Instantiate(end);
+        popup.SetActive(true);
     }
 }
